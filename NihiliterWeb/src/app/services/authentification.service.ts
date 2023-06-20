@@ -51,4 +51,17 @@ export class AuthentificationService {
         }
       });
   }
+
+  register(formGroup: FormGroup) {
+    this.credentialsService.getRegistered(formGroup.value)
+      .subscribe({
+        next: _ => {
+          alert("Done!");
+          location.reload();
+        },
+        error: (err: any) => {
+          alert("Eroare!!");
+        },
+      });
+  }
 }

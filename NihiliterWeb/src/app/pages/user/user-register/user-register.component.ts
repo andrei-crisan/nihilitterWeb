@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthentificationService } from 'src/app/services/authentification.service';
 
 @Component({
   selector: 'app-user-register',
@@ -9,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class UserRegisterComponent implements OnInit {
   registerForm!: FormGroup;
 
-  constructor() { }
+  constructor(private authentificationService: AuthentificationService) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -26,7 +27,9 @@ export class UserRegisterComponent implements OnInit {
   }
 
   register() {
-
+    if (this.registerForm.valid) {
+      this.authentificationService.register(this.registerForm);
+    }
   }
 
 }

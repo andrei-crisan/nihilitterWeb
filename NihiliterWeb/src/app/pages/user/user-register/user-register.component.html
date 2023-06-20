@@ -1,12 +1,27 @@
-<div class="login-box">
-    <div class="login-card">
+<div class="register-box">
+    <div class="register-card">
         <mat-card>
             <mat-toolbar style="height:45px;">
-                <span>Login</span>
+                <span>Register</span>
             </mat-toolbar>
             <br>
-            <form class="login_form" [formGroup]="registerForm" (ngSubmit)="register()">
-                <mat-form-field class="username">
+            <form class="register_form" [formGroup]="registerForm" (ngSubmit)="register()">
+                <mat-form-field class="firstName">
+                    <mat-label>First name: </mat-label>
+                    <input matInput formControlName="firstName">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="lastName">
+                    <mat-label>Last name: </mat-label>
+                    <input matInput formControlName="lastName">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="country">
+                    <mat-label>Country: </mat-label>
+                    <input matInput formControlName="country">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="email">
                     <mat-label>Email: </mat-label>
                     <input matInput formControlName="email">
                 </mat-form-field>
