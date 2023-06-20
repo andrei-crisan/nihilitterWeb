@@ -1,3 +1,4 @@
+import { Message } from "./message";
 import { Nihil } from "./nihil";
 
 export interface User {
@@ -6,8 +7,8 @@ export interface User {
     lastName: String;
     country: String;
     email: String;
-    password: String;
-    posts: Nihil[];
-    Friends: User[];
-    List<Message>?Messages
+    password?: String;
+    posts?: Nihil[];
+    friends?: User[];
+    messages?: Message[];
 }

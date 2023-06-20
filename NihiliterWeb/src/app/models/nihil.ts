@@ -1,5 +1,5 @@
 export interface Nihil {
-    id: number;
+    id?: number;
     post: String;
     postDate: String;
     userId: number;
