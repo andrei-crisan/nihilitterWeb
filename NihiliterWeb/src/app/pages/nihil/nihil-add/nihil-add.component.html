@@ -1,1 +1,9 @@
-<p>nihil-add works!</p>
+  <div class="form-container">
+    <form class="nihil-add-form" [formGroup]="formGroup" (ngSubmit)="submitNihilPost()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Is there nothing on your mind?</mat-label>
+        <textarea matInput formControlName="nihil"></textarea>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Post</button>
+    </form>
+  </div>
