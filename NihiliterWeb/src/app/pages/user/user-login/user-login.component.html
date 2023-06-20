@@ -5,7 +5,7 @@
                 <span>Login</span>
             </mat-toolbar>
             <br>
-            <form class="login_form" [formGroup]="registerForm" (ngSubmit)="register()">
+            <form class="login_form" [formGroup]="loginForm" (ngSubmit)="login()">
                 <mat-form-field class="username">
                     <mat-label>Email: </mat-label>
                     <input matInput formControlName="email">
