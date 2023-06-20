@@ -19,6 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { UserLoginComponent } from './pages/user/user-login/user-login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AuthInterceptorProvider, HttpsealInterceptor } from './httpseal.interceptor';
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatCardModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

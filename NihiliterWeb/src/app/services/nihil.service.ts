@@ -20,13 +20,11 @@ export class NihilService {
   submitNihilPost(formGroup: FormGroup): Observable<Nihil> {
 
     //Todo: temporary object
-    let nihilToPost: { post: string, postDate: Date, userId: number } =
+    let nihilToPost: { post: string, postDate: Date } =
     {
       post: formGroup.get('nihil')?.value,
-      postDate: new Date(),
-      userId: 1
+      postDate: new Date()
     };
-    console.log(nihilToPost);
     return this.httpClient.post<Nihil>(this.nihilWebApiLink, nihilToPost);
   }
 
