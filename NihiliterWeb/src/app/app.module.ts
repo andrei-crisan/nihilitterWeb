@@ -9,6 +9,8 @@ import { UserDetailsComponent } from './pages/user/user-details/user-details.com
 import { NihilListComponent } from './pages/nihil/nihil-list/nihil-list.component';
 import { NihilAddComponent } from './pages/nihil/nihil-add/nihil-add.component';
 
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +18,13 @@ import { NihilAddComponent } from './pages/nihil/nihil-add/nihil-add.component';
     UserRegisterComponent,
     UserDetailsComponent,
     NihilListComponent,
-    NihilAddComponent
+    NihilAddComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
