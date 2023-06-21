@@ -21,6 +21,7 @@ import { UserLoginComponent } from './pages/user/user-login/user-login.component
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AuthInterceptorProvider, HttpsealInterceptor } from './httpseal.interceptor';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { NihilOwnpostsComponent } from './pages/nihil/nihil-ownposts/nihil-ownposts.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     NihilListComponent,
     NihilAddComponent,
     UserLoginComponent,
+    NihilOwnpostsComponent,
   ],
   imports: [
     BrowserModule,

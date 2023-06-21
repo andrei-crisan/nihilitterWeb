@@ -9,12 +9,17 @@ import { FormGroup } from '@angular/forms';
 })
 export class NihilService {
   private nihilWebApiLink: string = "https://localhost:7230/Nihil";
+  private nihilByUserWebApiLink: string = "https://localhost:7230/allNihil";
 
   constructor(private httpClient: HttpClient) { }
 
   getAllNihils(): Observable<Nihil[]> {
     return this.httpClient
       .get<Nihil[]>(this.nihilWebApiLink);
+  }
+
+  getAllMyPosts(): Observable<Nihil[]>{
+    return this.httpClient.get<Nihil[]>(this.nihilByUserWebApiLink);
   }
 
   submitNihilPost(formGroup: FormGroup): Observable<Nihil> {
