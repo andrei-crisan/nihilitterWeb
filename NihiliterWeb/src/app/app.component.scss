@@ -1,29 +1,33 @@
 #dreapta {
-    background-color: red;
-    width: 25%;
+    background-color: rgb(158, 153, 153);
+    width: 20%;
     height: 100%;
     float: right;
-
 }
 
 #stanga {
-    background-color: rgb(28, 125, 182);
-    width: 25%;
+    background-color: rgb(65, 120, 151);
+    width: 20%;
     height: 100%;
     float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #mijloc {
     display: flex;
     justify-content: center;
     background-color: rgb(235, 232, 235);
-    width: 50%;
+    width: 60%;
     height: 100%;
     margin: 0 auto;
 }
 
 .second-grid-container{
     width: 100%;
+    padding: 30px;
 }
 
 //Temporary:
