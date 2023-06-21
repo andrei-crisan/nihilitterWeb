@@ -1,0 +1,33 @@
+#dreapta {
+    background-color: red;
+    width: 25%;
+    height: 100%;
+    float: right;
+
+}
+
+#stanga {
+    background-color: rgb(28, 125, 182);
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+#mijloc {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 232, 235);
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.second-grid-container{
+    width: 100%;
+}
+
+//Temporary:
+i{
+    color: white;
+    font-size: 50px;
+}

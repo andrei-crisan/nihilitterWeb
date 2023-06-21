@@ -20,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
 import { UserLoginComponent } from './pages/user/user-login/user-login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AuthInterceptorProvider, HttpsealInterceptor } from './httpseal.interceptor';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { AuthInterceptorProvider, HttpsealInterceptor } from './httpseal.interce
     MatSelectModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatGridListModule
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
