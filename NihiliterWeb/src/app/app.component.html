@@ -1,25 +1,26 @@
-<div class="container">
-<div id="dreapta">unu</div>
-<div id="stanga">
-    <i class="material-icons">home</i>Home
-    <br>
-    <i class="material-icons">search</i>Search
-    <br>
-    <i class="material-icons">account_box</i> Profile
-    <br>
-    <i class="material-icons">people</i> Friends
-    <br>
-    <i class="material-icons">newspaper</i> Notification
-    <br>
-    <i class="material-icons">exit_to_app</i> Logout
-</div>
-<div id="mijloc">
-    <div class="second-grid-container">
-        <h3>@HOME</h3>
-        <router-outlet></router-outlet>
-        <app-nihil-list></app-nihil-list>
+<mat-grid-list cols="1" rowHeight="100%">
+    <mat-grid-tile >
+        <div id="stanga">
+            <i class="material-icons">home</i>Home
+            <br>
+            <i class="material-icons">search</i>Search
+            <br>
+            <i class="material-icons">account_box</i> Profile
+            <br>
+            <i class="material-icons">people</i> Friends
+            <br>
+            <i class="material-icons">newspaper</i> Notification
+            <br>
+            <i class="material-icons">exit_to_app</i> Logout
+        </div>
+ 
+        <div id="mijloc">
+        <div class="second-grid-container">
+            <h3>@HOME</h3>
+            <router-outlet></router-outlet>
+            <app-nihil-list></app-nihil-list>
+        </div>
     </div>
-</div>
-</div>
-
-
+        <div id="dreapta">unu</div>
+    </mat-grid-tile>
+</mat-grid-list>

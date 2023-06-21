@@ -7,9 +7,8 @@
 
 #stanga {
     background-color: rgb(65, 120, 151);
-    width: 20%;
+    width: 30%;
     height: 100%;
-    float: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,22 +18,16 @@
 #mijloc {
     display: flex;
     justify-content: center;
-  
     background-color: rgb(235, 232, 235);
-    width: 60%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
-}
-
-.second-grid-container{
-    width: 100%;
-    padding: 30px;
 }
 
 //Temporary:
 i{
     color: white;
-    font-size: 50px;
+    font-size: 60px;
 }
 .container{
     display: flex;
@@ -42,3 +35,7 @@ i{
     height: 100vh;
     overflow: auto;
 }
+
+mat-grid-tile {
+    background: lightblue;
+}  
