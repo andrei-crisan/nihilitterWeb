@@ -5,6 +5,7 @@ import { UserRegisterComponent } from './pages/user/user-register/user-register.
 import { NihilListComponent } from './pages/nihil/nihil-list/nihil-list.component';
 import { NihilAddComponent } from './pages/nihil/nihil-add/nihil-add.component';
 import { NihilOwnpostsComponent } from './pages/nihil/nihil-ownposts/nihil-ownposts.component';
+import { UserFriendsComponent } from './pages/user/user-friends/user-friends.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'profile', component: NihilOwnpostsComponent,
   },
+  {
+    path: 'friends', component: UserFriendsComponent,
+  },
+  
 ];
 
 @NgModule({

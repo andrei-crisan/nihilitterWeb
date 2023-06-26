@@ -42,7 +42,7 @@ export class AuthentificationService {
           localStorage.setItem('nietszche', result.token);
           this.loggedUser = this.getLoggedUser(result.token);
           this._isLoggedIn$.next(true);
-          // this.route.navigate(['']);                                 //TODO: De setat ruta!!
+          this.route.navigate(['/nihileets']);                                 //TODO: De setat ruta!!
         },
         error: () => {
           alert("Nothing!");

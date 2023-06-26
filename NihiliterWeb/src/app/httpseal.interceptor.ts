@@ -15,7 +15,6 @@ export class HttpsealInterceptor implements HttpInterceptor {
   constructor(private authentificationService: AuthentificationService) { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    console.log(this.authentificationService.token);
     if (this.authentificationService.token) {
       request = request.clone({
         headers: request.headers.set('Authorization', 'Bearer ' + this.authentificationService.token)
