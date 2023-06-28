@@ -51,7 +51,7 @@ import { UserFriendsComponent } from './pages/user/user-friends/user-friends.com
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]

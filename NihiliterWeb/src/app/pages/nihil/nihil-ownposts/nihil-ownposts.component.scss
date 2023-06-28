@@ -1,0 +1,15 @@
+.nihil-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+mat-card{
+    width: 700px;
+    margin: 4px;
+}
+p{
+    font-weight: bold;
+}
+mat-grid-tile {
+    background: lightblue;
+  }

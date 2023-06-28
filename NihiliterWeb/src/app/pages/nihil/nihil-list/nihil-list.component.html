@@ -1,8 +1,12 @@
 <div class="nihil-list">
     <p>@latest nihileets</p>
     <mat-card *ngFor="let nihil of nihils">
-        <mat-card-content>{{nihil.userId}}, {{nihil.post}}, {{nihil.postDate}}</mat-card-content>
+        <mat-card-content>
+         @ {{nihil.userId}}
+         <br>
+          Nihileet: {{nihil.post}}
+          <br>
+          Date: {{nihil.postDate}}</mat-card-content>
       </mat-card>
     <br>
-    <!-- <p *ngFor="let nihil of nihils">{{nihil.post}}, {{nihil.userId}}</p> -->
 </div>

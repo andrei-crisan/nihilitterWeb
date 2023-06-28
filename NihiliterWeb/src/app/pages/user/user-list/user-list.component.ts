@@ -10,6 +10,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserListComponent implements OnInit {
   usersList: User[] = [];
+  searchText: any;
+  filteredUsers: User[] = [];
 
   constructor(private usersService: UserService, private friendshipService: FriendshipService) { }
 
