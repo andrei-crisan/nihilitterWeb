@@ -27,7 +27,8 @@ export class UserListComponent implements OnInit {
   addFollower(userId: number) {
     this.friendshipService.addNewFollower(userId)
       .subscribe(_ => {
-        alert("new Connection Added!");
+        alert("New friend!");
+        location.reload();
       });
   }
 

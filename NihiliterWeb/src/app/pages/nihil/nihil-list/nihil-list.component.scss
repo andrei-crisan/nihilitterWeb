@@ -1,12 +1,14 @@
-.nihil-list{
+.nihil-list {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
-mat-card{
+
+mat-card {
     width: 700px;
     margin: 4px;
 }
-.nihil-list p{
+
+.nihil-list p {
     font-weight: bold;
 }

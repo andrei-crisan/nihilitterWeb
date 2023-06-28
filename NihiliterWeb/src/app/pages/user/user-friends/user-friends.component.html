@@ -1,13 +1,39 @@
-<p>@Following</p>
-<mat-card *ngFor="let friend of listOfFriends">
-  <mat-card-content>{{friend.id}},{{friend.firstName}}, {{friend.lastName}}, {{friend.country}}, {{friend.email}}
-    <i (click)="removeFollowing(friend.friendshipId)"class="material-icons">cancel</i>
-  </mat-card-content>
-</mat-card>
-<br>
-<p>@Followers</p>
-<mat-card *ngFor="let follower of listOfFollowers">
-  <mat-card-content>{{follower.id}},{{follower.firstName}}, {{follower.lastName}}, {{follower.country}}, {{follower.email}},
-  </mat-card-content>
-</mat-card>
-<br>
+<div class="user-table">
+  <h3> @following</h3>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="listofFriends">
+      <!-- FirstName category-->
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> FirstName </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+      </ng-container>
+
+      <!-- LastName duration -->
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> lastName </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+      </ng-container>
+      <!-- Email column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+      <!-- Country column -->
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef> Country </th>
+        <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+      </ng-container>
+
+      <!-- actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <i (click)="removeFollowing(element.friendshipId)"class="material-icons">cancel</i>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

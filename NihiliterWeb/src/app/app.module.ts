@@ -25,7 +25,9 @@ import { NihilOwnpostsComponent } from './pages/nihil/nihil-ownposts/nihil-ownpo
 import { UserFriendsComponent } from './pages/user/user-friends/user-friends.component';
 import { CustomFilterPipePipe } from './custom-filter-pipe.pipe';
 import { MenuComponent } from './pages/menu/menu.component';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,9 @@ import { MenuComponent } from './pages/menu/menu.component';
     MatCardModule,
     MatToolbarModule,
     MatGridListModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatIconModule
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]

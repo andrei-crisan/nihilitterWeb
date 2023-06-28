@@ -1,16 +1,17 @@
 <p>@Nihilists</p>
 <div class="users-container">
-  <input type="text" class="form" [(ngModel)]="searchText">
-<mat-card *ngFor="let user of usersList | customFilterPipe:searchText">
-  <mat-card-content>
-    {{user.firstName}}, 
-    {{user.lastName}}, 
-    <br>
-    {{user.email}}
-    <br>
-    {{user.country}}
-    <br>
-    <i (click)="addFollower(user.id)" class="material-icons">add_circle_outline</i>
-     </mat-card-content>
-</mat-card>
+  <mat-form-field class="search-form-field">
+    <mat-label>Nihilists of the world, unite!</mat-label>
+    <input matInput type="text" [(ngModel)]="searchText">
+  </mat-form-field>
+  <!-- <input type="text" class="form" [(ngModel)]="searchText"> -->
+  <mat-card *ngFor="let user of usersList | customFilterPipe:searchText">
+    <mat-card-content>
+      {{user.firstName}},
+      {{user.lastName}},
+      {{user.email}}
+      {{user.country}}
+      <i (click)="addFollower(user.id)" class="material-icons">add_circle_outline</i>
+    </mat-card-content>
+  </mat-card>
 </div>

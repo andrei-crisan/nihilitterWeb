@@ -1,20 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Pipe({
   name: 'customFilterPipe'
 })
 export class CustomFilterPipePipe implements PipeTransform {
 
-  transform(value: any, filterString: string) {
-    if (value.length === 0 || filterString === '') {
-      return value;
+  transform(value: User[], filterString: string): User[] {
+    if (!value || value.length === 0 || !filterString) {
+      return [];
     }
-    const users = [];
-    for (const user of value) {
-      if (user['firstName'] === filterString || user['lastName'] === filterString) {
-        users.push(user)
-      }
-    }
-    return users;
+    const normalizedFilter = filterString.toLowerCase();
+    return value.filter((user: User) => {
+      const firstName = user.firstName.toLowerCase();
+      const lastName = user.lastName.toLowerCase();
+      return firstName.includes(normalizedFilter) || lastName.includes(normalizedFilter);
+    });
   }
 }
