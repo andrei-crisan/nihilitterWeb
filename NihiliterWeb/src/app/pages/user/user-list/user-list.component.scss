@@ -1,8 +1,19 @@
-.search-form-field {
+.users-container {
+    text-align: center; 
+  }
+  
+  .users-container h3 {
+    font-weight: bold;
+    margin-top: 20px; 
+  }
+  
+  .search-form-field {
     width: 500px;
   }
-  i{
+  
+  i {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
   }
+  
