@@ -1,9 +1,12 @@
-  <div class="form-container">
-    <form class="nihil-add-form" [formGroup]="formGroup" (ngSubmit)="submitNihilPost()">
+<div class="form-container">
+  <form class="nihil-add-form" [formGroup]="formGroup" (ngSubmit)="submitNihilPost()">
+    <div class="input-container">
       <mat-form-field class="example-full-width">
         <mat-label>Is there nothing on your mind?</mat-label>
-        <textarea matInput formControlName="nihil"></textarea>
+        <input matInput #message maxlength="256" formControlName="nihil" placeholder="Ex. I need help with...">
+        <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
       </mat-form-field>
       <button type="submit" mat-raised-button color="primary">Post</button>
-    </form>
-  </div>
+    </div>
+  </form>
+</div>

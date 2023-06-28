@@ -1,0 +1,27 @@
+<div class="controls-container" *ngIf="autentificationService.isLoggedIn$ | async">
+    <i routerLink="/nihileets" class="material-icons">home</i>
+    <p>Home</p>
+    <br>
+    <i routerLink="/users" class="material-icons">search</i>
+    <p>Search</p>
+    <i routerLink="/profile" class="material-icons">account_box</i>
+    <p>Profile</p>
+    <br>
+    <i routerLink="/friends" class="material-icons">people</i>
+    <p>Friends</p>
+    <br>
+    <i class="material-icons">newspaper</i>
+    <p>Notification</p>
+    <br>
+    <i (click)="logout()" class="material-icons">exit_to_app</i>
+    <p>Logout</p>
+</div>
+
+<div class="controls-container" *ngIf="!(autentificationService.isLoggedIn$ | async)">
+    <i routerLink="/login" class="material-icons">login</i>
+    <p>Login</p>
+    <br>
+    <i routerLink="/register" class="material-icons">app_registration</i>
+    <p>Register</p>
+    <br>
+</div>

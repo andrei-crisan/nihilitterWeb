@@ -3,7 +3,7 @@ import { Nihil } from "./nihil";
 
 export interface User {
     id: number;
-    firstName: String;
+    firstName: string;
     lastName: String;
     country: String;
     email: String;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthentificationService } from './services/authentification.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'NihiliterWeb';
 
-  logout() {
-    if(confirm("Are you sure?")){
-      localStorage.removeItem('nietszche');
-    }
-  }
+constructor(){}
 }

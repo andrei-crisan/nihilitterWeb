@@ -24,6 +24,9 @@ export class NihilAddComponent implements OnInit {
 
   submitNihilPost() {
     this.nihilService.submitNihilPost(this.formGroup)
-      .subscribe(_ => console.log("Submited!"));
+      .subscribe(_ => {
+        console.log("Submited!")
+        location.reload();
+      });
   }
 }

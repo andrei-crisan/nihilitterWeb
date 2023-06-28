@@ -23,6 +23,8 @@ import { AuthInterceptorProvider, HttpsealInterceptor } from './httpseal.interce
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NihilOwnpostsComponent } from './pages/nihil/nihil-ownposts/nihil-ownposts.component';
 import { UserFriendsComponent } from './pages/user/user-friends/user-friends.component';
+import { CustomFilterPipePipe } from './custom-filter-pipe.pipe';
+import { MenuComponent } from './pages/menu/menu.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { UserFriendsComponent } from './pages/user/user-friends/user-friends.com
     UserLoginComponent,
     NihilOwnpostsComponent,
     UserFriendsComponent,
+    CustomFilterPipePipe,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

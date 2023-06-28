@@ -1,9 +1,29 @@
+.form-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 .nihil-add-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically align items */
+}
+
+.mat-form-field {
+  flex: 1;
+  margin-right: 10px;
+}
+button{
+  margin-left: 10px;
+  margin-bottom: 20px;
+}

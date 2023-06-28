@@ -1,28 +1,13 @@
 <mat-grid-list cols="1" rowHeight="100%">
     <mat-grid-tile>
         <div id="stanga">
-            <i routerLink="/nihileets" class="material-icons">home</i>
-            <p>Home</p>
-            <br>
-            <i routerLink="/users" class="material-icons">search</i>
-            <p>Search</p>
-            <i routerLink="/profile" class="material-icons">account_box</i>
-            <p>Profile</p>
-            <br>
-            <i routerLink="/friends" class="material-icons">people</i>
-            <p>Friends</p>
-            <br>
-            <i class="material-icons">newspaper</i>
-            <p>Notification</p>
-            <br>
-            <i (click)="logout()" class="material-icons">exit_to_app</i>
-            <p>Logout</p>
+            <app-menu ></app-menu>
         </div>
         <div id="mijloc">
             <div class="second-grid-container">
                 <router-outlet></router-outlet>
             </div>
         </div>
-        <div id="dreapta">unu</div>
+        <div id="dreapta">#hastag</div>
     </mat-grid-tile>
 </mat-grid-list>

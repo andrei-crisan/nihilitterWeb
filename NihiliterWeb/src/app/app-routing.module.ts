@@ -7,6 +7,8 @@ import { NihilAddComponent } from './pages/nihil/nihil-add/nihil-add.component';
 import { NihilOwnpostsComponent } from './pages/nihil/nihil-ownposts/nihil-ownposts.component';
 import { UserFriendsComponent } from './pages/user/user-friends/user-friends.component';
 import { UserListComponent } from './pages/user/user-list/user-list.component';
+import { guardianGuard } from './guardian.guard';
+import { MenuComponent } from './pages/menu/menu.component';
 
 const routes: Routes = [
   {
@@ -17,20 +19,26 @@ const routes: Routes = [
   },
   {
     path: 'nihileets', component: NihilListComponent,
+    canActivate: [guardianGuard],
   },
+
   {
     path: 'post', component: NihilAddComponent,
+    canActivate: [guardianGuard],
   },
   {
     path: 'profile', component: NihilOwnpostsComponent,
+    canActivate: [guardianGuard],
   },
   {
     path: 'friends', component: UserFriendsComponent,
+    canActivate: [guardianGuard],
   },
   {
     path: 'users', component: UserListComponent,
+    canActivate: [guardianGuard],
   },
-  
+
 ];
 
 @NgModule({
