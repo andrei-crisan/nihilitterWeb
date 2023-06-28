@@ -1,1 +1,6 @@
-sss
+<p>@Nihilists</p>
+<mat-card *ngFor="let user of usersList">
+  <mat-card-content>{{user.id}},{{user.firstName}}, {{user.lastName}}, {{user.email}}, {{user.country}}
+    <i (click)="addFollower(user.id)" class="material-icons">add_circle_outline</i>
+     </mat-card-content>
+</mat-card>

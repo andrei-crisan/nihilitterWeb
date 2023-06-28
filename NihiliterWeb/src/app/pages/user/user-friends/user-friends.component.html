@@ -1,6 +1,13 @@
-
-    <p>@Friends</p>
-    <mat-card *ngFor="let friend of listOfFriends">
-        <mat-card-content>{{friend.firstName}}, {{friend.lastName}}, {{friend.country}}, {{friend.email}}, {{friend.isConfirmed}}</mat-card-content>
-      </mat-card>
-    <br>
+<p>@Following</p>
+<mat-card *ngFor="let friend of listOfFriends">
+  <mat-card-content>{{friend.id}},{{friend.firstName}}, {{friend.lastName}}, {{friend.country}}, {{friend.email}}
+    <i (click)="removeFollowing(friend.friendshipId)"class="material-icons">cancel</i>
+  </mat-card-content>
+</mat-card>
+<br>
+<p>@Followers</p>
+<mat-card *ngFor="let follower of listOfFollowers">
+  <mat-card-content>{{follower.id}},{{follower.firstName}}, {{follower.lastName}}, {{follower.country}}, {{follower.email}},
+  </mat-card-content>
+</mat-card>
+<br>

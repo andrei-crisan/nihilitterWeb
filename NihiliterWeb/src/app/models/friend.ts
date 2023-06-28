@@ -4,5 +4,6 @@ export interface Friend {
     lastName: string,
     country: string,
     email: string,
-    isConfirmed: boolean
+    isConfirmed: boolean,
+    friendshipId: number
 }

@@ -7,11 +7,11 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class UserService {
-  private userWebApiLink: string = "https://localhost:7230/friendship/friends";
+  private userWebApiLink: string = "https://localhost:7230/users";
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllFriendships(): Observable<User> {
-    return this.httpClient.get<User>(this.userWebApiLink);
+  getAllUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>(this.userWebApiLink);
   }
 }
