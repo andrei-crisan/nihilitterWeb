@@ -12,11 +12,13 @@ import { FriendshipService } from 'src/app/services/friendship.service';
   styleUrls: ['./user-friends.component.scss']
 })
 export class UserFriendsComponent implements OnInit {
-  // listOfFriends: Friend[] = [];
-  listOfFollowers: Friend[] = [];
-
+  // listOfFollowers: Friend[] = [];
+  listOfFollowers = new MatTableDataSource<User>;
   displayedColumns: string[] = ['firstName', 'lastName', 'email', 'country', 'actions'];
+  displayedColumnsFollowers: string[] = ['firstName', 'lastName', 'email', 'country'];
   listofFriends = new MatTableDataSource<User>;
+  toggleList: boolean = false;
+
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private friendShipService: FriendshipService) { }
@@ -28,6 +30,7 @@ export class UserFriendsComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.listofFriends.paginator = this.paginator;
+    this.listOfFollowers.paginator = this.paginator;
   }
   getAllFriendsByUser() {
     this.friendShipService.getAllFriendships()
@@ -46,7 +49,7 @@ export class UserFriendsComponent implements OnInit {
 
   getFollowers() {
     this.friendShipService.getAllFollowers()
-      .subscribe(x => this.listOfFollowers = x);
+      .subscribe(x => this.listOfFollowers.data = x);
   }
 
 
@@ -56,5 +59,10 @@ export class UserFriendsComponent implements OnInit {
 
     this.friendShipService.confirmFriendShip(friendRequest)
       .subscribe(_ => console.log("Friendship Confirmed!"));
+  }
+
+  toggleMenu() {
+    this.toggleList = this.toggleList == false ? true : false;
+    console.log(this.toggleList);
   }
 }
