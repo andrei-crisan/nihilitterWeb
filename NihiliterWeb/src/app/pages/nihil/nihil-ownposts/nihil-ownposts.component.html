@@ -2,7 +2,7 @@
   <div class="users-container">
     <h3>@own nihilism | own pain</h3>
   </div>
-  <mat-card *ngFor="let nihil of nihils">
+  <mat-card *ngFor="let nihil of nihils.reverse()">
     <mat-card-content>
       <div class="card-content-wrapper">
         <div class="post-content">{{ nihil.post }}</div>
