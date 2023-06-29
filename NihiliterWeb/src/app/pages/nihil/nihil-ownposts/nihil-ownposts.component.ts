@@ -21,4 +21,14 @@ export class NihilOwnpostsComponent implements OnInit {
       .subscribe(x => this.nihils = x);
   }
 
+  removeNihileet(nihil: number) {
+    if (confirm("Are you sure?")) {
+      this.nihilService.deleteNihileet(nihil)
+        .subscribe(_ => {
+          alert("Deleted!")
+          location.reload();
+        });
+    }
+  }
+
 }

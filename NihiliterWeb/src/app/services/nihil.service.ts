@@ -18,7 +18,7 @@ export class NihilService {
       .get<Nihil[]>(this.nihilWebApiLink);
   }
 
-  getAllMyPosts(): Observable<Nihil[]>{
+  getAllMyPosts(): Observable<Nihil[]> {
     return this.httpClient.get<Nihil[]>(this.nihilByUserWebApiLink);
   }
 
@@ -30,8 +30,14 @@ export class NihilService {
       post: formGroup.get('nihil')?.value,
       postDate: new Date()
     };
-    return this.httpClient.post<Nihil>(this.nihilWebApiLink, nihilToPost);
+    return this.httpClient
+      .post<Nihil>(this.nihilWebApiLink, nihilToPost);
   }
-  
+
+  deleteNihileet(nihilId: number): Observable<Nihil> {
+    const trackerItemRestUrlDeleteOne = `${this.nihilWebApiLink}/${nihilId}`;
+    return this.httpClient.delete<Nihil>(trackerItemRestUrlDeleteOne);
+  }
+
 
 }
