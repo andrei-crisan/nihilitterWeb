@@ -1,13 +1,13 @@
 <div class="nihil-list">
-    <app-nihil-add></app-nihil-add>
-    <p>@latest | #nihileets</p>
-    <mat-card *ngFor="let nihil of nihils.reverse()">
-        <mat-card-content>
-         @ {{nihil.userId}}
-         <br>
-        {{nihil.post}}
-          <br>
-          On: {{nihil.postDate | date:'medium'}}</mat-card-content>
-      </mat-card>
-    <br>
+  <app-nihil-add></app-nihil-add>
+  <p>@latest | #nihileets</p>
+  <mat-card *ngFor="let nihil of nihils.reverse()">
+    <mat-card-content>
+      @{{nihil.post}}
+      <br>
+      #{{nihil.firstName}}, {{nihil.lastName}}
+      <br>
+      #{{nihil.postDate | date:'medium'}}</mat-card-content>
+  </mat-card>
+  <br>
 </div>

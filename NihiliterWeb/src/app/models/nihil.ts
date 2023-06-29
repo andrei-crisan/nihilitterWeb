@@ -3,4 +3,6 @@ export interface Nihil {
     post: String;
     postDate: Date;
     userId: number;
+    firstName?: string,
+    lastName?: string
 }
